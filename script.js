@@ -31,3 +31,4 @@ ui.start('#firebaseui-auth-container', uiConfig);
 const auth = firebase.auth();
 // // Firebase UIの初期化
 // const ui = new firebaseui.auth.AuthUI(auth);
+ 
