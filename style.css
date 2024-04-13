@@ -1,0 +1,23 @@
+
+body {
+    font-family: Arial, sans-serif; /* フォントファミリーの指定 */
+    font-size: 16px; /* フォントサイズの指定 */
+    color: #333; /* テキストカラーの指定 */
+    background-color:white; /* 背景色の指定 */
+}
+.map img{
+    width: 100%;
+
+}
+.map{
+    position: relative; /* 相対的な位置指定 */
+     display: inline-block; /* インラインブロック要素 */
+}
+.overlay-text {
+    position: absolute; /* 絶対的な位置指定 */
+    top: 50%; /* 画像の上端から中央に配置 */
+    left: 50%; /* 画像の左端から中央に配置 */
+    transform: translate(-50%, -50%); /* 中央揃え */
+    background-color: pink; /* テキストの背景色 */
+    padding: 10px; /* テキストの余白 */
+}
