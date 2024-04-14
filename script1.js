@@ -16,6 +16,7 @@ function decrementCount() {
   setTimeout(decrementCount, 5000);
 }
 
+
 function increment() {
   count++;
   if (count > 100) {

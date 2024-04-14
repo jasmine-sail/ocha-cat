@@ -10,3 +10,4 @@ export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+

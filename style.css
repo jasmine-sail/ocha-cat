@@ -1,0 +1,126 @@
+
+body {
+    font-family: Arial, sans-serif; /* フォントファミリーの指定 */
+    font-size: 16px; /* フォントサイズの指定 */
+    color: #333; /* テキストカラーの指定 */
+    background-color:white; /* 背景色の指定 */
+    
+}
+a{
+    color:pink;
+    font-size: 80px;
+    text-decoration: none;
+   
+}
+ 
+.header{
+    text-align: center;
+    font-family: "M PLUS 1p", sans-serif;
+}
+.map img{
+    width: 100%;
+    
+
+}
+.map{
+    position: relative; /* 相対的な位置指定 */
+     display: inline-block; /* インラインブロック要素 */
+}
+.sience,.honkan,.library{
+     display: inline-block;
+     vertical-align: middle;
+     color: #333;
+     line-height: 1;
+     position: absolute; /* 絶対位置指定 */
+     width: 4em;
+     height: 4em;
+     background: currentColor;
+     border: 0.1em solid currentColor;
+     border-radius: 40% 60% 0% 100% / 40% 100% 0% 60%;
+     box-sizing: content-box;
+     transform: rotate(45deg);
+      
+}
+.seimon,.road,.minamimon,.l,.kyo-tu,.seikyo{
+    display: inline-block;
+    vertical-align: middle;
+    color: red;
+    line-height: 1;
+    position: absolute; /* 絶対位置指定 */
+    width: 4em;
+    height: 4em;
+    background: currentColor;
+    border: 0.1em solid currentColor;
+    border-radius: 40% 60% 0% 100% / 40% 100% 0% 60%;
+    box-sizing: content-box;
+    transform: rotate(45deg);
+}
+.sience{
+    top: 20.9%; /* 上端からの距離を調整 */
+    left: 57.4%; /* 左端からの距離を調整 */
+}
+.honkan{
+    top: 44%; /* 上端からの距離を調整 */
+    left: 29%; /* 左端からの距離を調整 */
+}
+.library{
+    top: 9%; /* 上端からの距離を調整 */
+    left: 32%; /* 左端からの距離を調整 */  
+}
+.seimon{
+    top: 86.3%; /* 上端からの距離を調整 */
+    left: 29%; /* 左端からの距離を調整 */  
+}
+.road{
+    top: 67.5%; /* 上端からの距離を調整 */
+    left: 29%; /* 左端からの距離を調整 */  
+}
+.minamimon{
+    top: 20.7%; /* 上端からの距離を調整 */
+    left: 13.6%; /* 左端からの距離を調整 */  
+}
+.l{
+    top: 22.5%; /* 上端からの距離を調整 */
+    left: 30.3%; /* 左端からの距離を調整 */
+}
+.kyo-tu{
+    top: 3.3%; /* 上端からの距離を調整 */
+    left: 37.3%; /* 左端からの距離を調整 */
+}
+.seikyo{
+    top: 27.3%; /* 上端からの距離を調整 */
+    left: 41.3%; /* 左端からの距離を調整 */  
+} 
+    
+
+.sience::before,.honkan::before,.library::before,.seimon::before,.road::before,.minamimon::before,.l::before,.kyo-tu::before,.seikyo::before {
+    content: '';
+    position: absolute;
+    top: 18%;
+    left: 18%;
+    width: 2.0em;
+    height: 2.0em;
+    background: #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.start {
+	background: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 9000;
+}
+.start p {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+	width: 280px;
+}
+
