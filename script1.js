@@ -1,17 +1,10 @@
 let count = 0; // カウントを初期化
 let buttonCount = 0;
 let messageTimeout;
-let countReached = 0;
-
-// const images = [
-//   "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjm-knfG3Qx9SP4CDnC51wozqS6WF91xYA-Gyc2Xo5pMJ6Ie4jKf5Ey7BTMOzLZEgbpf9GOVxG0z8Jvv3YoYnG9J2lmEAlFO3kNdpF_ai3hyphenhyphenqVKbicOX6YUtz6RtWnki1oaNjdyh6CnO2ZX/s400/cat_koubakozuwari_brown.png",
-//   "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicSNssHWac14jXI_2e9T3I4bMQTLnvqy-7VSo9p2e54mSE2Ei3rziJU2rhfstt-j90bnY8fb75eA3wUSgHgrUaLnCym7CW1Bq-0cwVwb0JeUmAg5WQUvhFgFoTIEZpWyY1UT6PSzBV_wzd/s400/cat_hair_long.png",
-//   "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYVAcCSq1zLz8B_Ayq2N9vTDFJJGJiRheOVimqNuAoFSD40jAH-sZhxggDxWV9srl1xBmltLcxFkvEvc1A1kucV80glcN0DJCT5Aa2QdTqv4DaXEXXHkW2Bqtf9rReqhzjiZqCFN-tbnfz/s400/cat_hair_summercut.png"
-// ];
 
 function decrementCount() {
   // カウントをマイナス1する
-  count -= 0.1;
+  count -= 1;
   if (count < 0) {
     count = 0; // カウントが負にならないように調整
   }
@@ -31,8 +24,6 @@ function increment() {
   document.getElementById('progress').style.width = count + '%'; // プログレスバーの幅を更新
   document.getElementById('progress').textContent = Math.floor(count) + '%'; // プログレスバーの値を更新
 
-  if (count % 100 === 0) { // countが100の倍数の場合のみ
-    enlargeImage(); // 画像を大きくする関数を呼び出す
   buttonCount++;
   if (buttonCount % 30 === 0 ) {
     alert("食べ過ぎたから少し休もう！")
@@ -41,11 +32,10 @@ function increment() {
         document.getElementById('foodButton').disabled = false; // ボタンを有効にする
       }, 5000);
     }
-  // if (count === 100) {
-  //   countReached++;
-  //   if(countReached % 3 === 0){
-  //     changeImage();
-  //   }    
+
+  if (count % 100 === 0) { // countが100の倍数の場合のみ
+    enlargeImage(); // 画像を大きくする関数を呼び出す
+
     document.getElementById('message').textContent = "満腹になりました！"; // メッセージを表示
     messageTimeout = setTimeout(function() {
       document.getElementById('message').textContent = ""; // メッセージを空にする
@@ -64,21 +54,6 @@ function enlargeImage() {
   img.style.width = (currentWidth + 10) + 'px'; // 10px増やして幅を変更
   img.style.height = 'auto'; // 高さを自動調整してアスペクト比を保持
 }
-
-// function changeImage() {
-//   const img = document.getElementById('cat').getElementsByTagName('img')[0]; // <div>内の最初の<img>要素
-//   if (countReached % 3 === 0 && countReached !== 0) {
-//     img.src = images[1];
-//   } 
-//   else if (countReached % 3 === 1) {
-//     img.src = images[2];
-//   } 
-//   else if (countReached % 3 === 2) {
-//     img.src = images[0];
-//   }
-
-// }
-
 // ボタンのクリックイベントを登録
 document.getElementById('foodButton').addEventListener('click', increment);
 

@@ -6,7 +6,7 @@ html, body {
 }
 body {
     height: 100%;
-    background-image: url("https://thumb.photo-ac.com/9d/9d6830e7e2de9e5ac6414e71a30f764c_t.jpeg");
+    background-image: url("https://aipict.com/wp-content/uploads/2022/09/lab07.png");
     background-color:rgba(255,255,255,0.5);
     background-blend-mode:lighten;
     background-size: cover; /* 画像を要素全体に広げる */
@@ -23,6 +23,10 @@ h1{
 p{
     text-align: right;
     margin: 10%;
+}
+.aboutfood{
+    display: flex;
+    padding-right: 2000px;
 }
 #foodButton {
     border: none;
