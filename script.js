@@ -32,15 +32,15 @@ function increment() {
   document.getElementById('progress').textContent = Math.floor(count) + '%'; // プログレスバーの値を更新
 
   buttonCount++;
-  // if (buttonCount === 30 || buttonCount === 70 ||
-  //     buttonCount === 80|| buttonCount === 90|| 
-  //     buttonCount ===  100 ) {
-  //   alert("一気に食べ過ぎたから少し休もう！")
-  //   document.getElementById('foodButton').disabled = true; // ボタンを無効にする
-  //   setTimeout(function() {
-  //       document.getElementById('foodButton').disabled = false; // ボタンを有効にする
-  //     }, 5000);
-  //   }
+  if (buttonCount === 30 || buttonCount === 70 ||
+      buttonCount === 80|| buttonCount === 90|| 
+      buttonCount ===  100 ) {
+    alert("一気に食べ過ぎたから少し休もう！")
+    document.getElementById('foodButton').disabled = true; // ボタンを無効にする
+    setTimeout(function() {
+        document.getElementById('foodButton').disabled = false; // ボタンを有効にする
+      }, 5000);
+    }
   if (count === 100) {
     countReached++;
     changeImage();
@@ -60,12 +60,13 @@ function increment() {
 }
 function changeImage() {
   const img = document.getElementById('cat');
-  if (countReached % 2 === 0) {
-    img.src = images[1]; // 2番目の画像に切り替える
+  if (countReached % 4 === 0) {
+    const img = document.getElementById('cat').getElementsByTagName('img')[0]; // <div>内の最初の<img>要素を取得
+  img.src = images[1]; 
   } 
-  // else {
-  //   img.src = images[2]; // 3番目の画像に切り替える
-  // }
+  else {
+    img.src = images[2]; // 3番目の画像に切り替える
+  }
 }
 // ボタンのクリックイベントを登録
 document.getElementById('foodButton').addEventListener('click', increment);

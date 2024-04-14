@@ -13,6 +13,9 @@ body {
     background-repeat: no-repeat; /* 画像の繰り返しを停止する */
     background-position: center;
     margin: 0;
+    font-family: Arial, sans-serif; /* フォントファミリーの指定 */
+    font-size: 16px; /* フォントサイズの指定 */
+    color: #333; /* テキストカラーの指定 */
 }
 h1{
     text-align: center;
