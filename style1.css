@@ -1,0 +1,65 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body {
+    height: 100%;
+    background-image: url("https://aipict.com/wp-content/uploads/2022/09/lab07.png");
+    background-color:rgba(255,255,255,0.5);
+    background-blend-mode:lighten;
+    background-size: cover; /* 画像を要素全体に広げる */
+    background-repeat: no-repeat; /* 画像の繰り返しを停止する */
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif; /* フォントファミリーの指定 */
+    font-size: 16px; /* フォントサイズの指定 */
+    color: #333; /* テキストカラーの指定 */
+}
+
+h1{
+    text-align: center;
+}
+p{
+    text-align: right;
+    margin: 10%;
+}
+.aboutfood{
+    display: flex;
+    padding-right: 2000px;
+}
+#foodButton {
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    margin: 10px;
+}
+#foodButton img{
+    border: none;
+    cursor: pointer;
+    width:100px;
+    height: 100px;
+    padding-bottom: 10px ;
+}
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background-color: red;
+    border-radius: 5px;
+    
+}
+.progress {
+    width: 10%;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+#cat{
+    width: 40%;
+    height: 40%;
+    margin: 0 auto;
+}
